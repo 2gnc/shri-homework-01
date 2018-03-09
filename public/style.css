@@ -1,2 +1,31 @@
-body {
-  background-color: #ffffff; }
+.page {
+  margin: 0;
+  padding: 0; }
+
+.container {
+  margin: 0 auto; }
+  @media (min-width: 0px) {
+    .container {
+      max-width: 90%; } }
+  @media (min-width: 768px) {
+    .container {
+      max-width: 80%; } }
+  @media (min-width: 992px) {
+    .container {
+      max-width: 704px; } }
+  @media (min-width: 1200px) {
+    .container {
+      max-width: 70%; } }
+
+.logo {
+  min-width: 91px; }
+  .logo__pic {
+    min-width: 91px;
+    min-height: 21px; }
+  .logo__link {
+    display: inline-block;
+    margin: 50px 0; }
+
+.main {
+  outline: 1px solid lime;
+  display: grid; }
