@@ -26,66 +26,78 @@
     display: inline-block;
     margin: 46px 0; }
 
-.card {
-  display: grid; }
-  .card__header {
-    font-family: "YS Text";
-    font-weight: 700;
-    font-style: normal;
-    font-stretch: normal;
-    font-size: 19px;
-    -o-text-overflow: clip;
-    text-overflow: clip; }
-    @media (min-width: 992px) {
-      .card__header {
-        font-size: 19px; } }
-    @media (min-width: 1200px) {
-      .card__header {
-        font-size: 22px; } }
-    @media (min-width: 1600px) {
-      .card__header {
-        font-size: 24px; } }
-  .card__pic {
-    width: 100%; }
-    @media (max-width: 320px) {
-      .card__pic {
-        display: none; } }
-  .card__desc {
-    font-family: "YS Text";
-    font-weight: 400;
-    font-style: normal;
-    font-stretch: normal;
-    font-size: 16px;
-    -o-text-overflow: ellipsis;
-    text-overflow: ellipsis; }
-    @media (min-width: 320px) {
-      .card__desc {
-        font-size: 16px; } }
-    @media (min-width: 576px) {
-      .card__desc {
-        font-size: 14px; } }
-    @media (min-width: 1200px) {
-      .card__desc {
-        font-size: 16px; } }
-    @media (min-width: 1600px) {
-      .card__desc {
-        font-size: 18px; } }
-    @media (min-width: 1920px) {
-      .card__desc {
-        font-size: 20px; } }
-  .card__controls {
-    width: 14px;
-    height: 4px;
-    cursor: pointer;
-    background-image: url("img/Actions.png"); }
-  .card__like {
-    width: 17px;
-    height: 16px;
-    cursor: pointer;
-    background-image: url("img/Heart.png"); }
+.card_m {
+  grid-column: span 6; }
+
+.card_s {
+  grid-column: span 4; }
+
+.card_l {
+  grid-column: span 12; }
+
+.card__header {
+  font-family: "YS Text";
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  font-size: 19px;
+  -o-text-overflow: clip;
+  text-overflow: clip; }
+  @media (min-width: 992px) {
+    .card__header {
+      font-size: 19px; } }
+  @media (min-width: 1200px) {
+    .card__header {
+      font-size: 22px; } }
+  @media (min-width: 1600px) {
+    .card__header {
+      font-size: 24px; } }
+
+.card__pic {
+  width: 100%; }
+  @media (max-width: 320px) {
+    .card__pic {
+      display: none; } }
+
+.card__desc {
+  font-family: "YS Text";
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  font-size: 16px;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis; }
+  @media (min-width: 320px) {
+    .card__desc {
+      font-size: 16px; } }
+  @media (min-width: 576px) {
+    .card__desc {
+      font-size: 14px; } }
+  @media (min-width: 1200px) {
+    .card__desc {
+      font-size: 16px; } }
+  @media (min-width: 1600px) {
+    .card__desc {
+      font-size: 18px; } }
+  @media (min-width: 1920px) {
+    .card__desc {
+      font-size: 20px; } }
+
+.card__controls {
+  width: 14px;
+  height: 4px;
+  cursor: pointer;
+  background-image: url("img/Actions.png"); }
+
+.card__like {
+  width: 17px;
+  height: 16px;
+  cursor: pointer;
+  background-image: url("img/Heart.png"); }
 
 .main {
-  outline: 1px solid lime;
+  height: 100%;
   display: grid;
-  grid-gap: 16px 29px;
-  grid-template-columns: repeat(6, 1fr); }
+  grid-column-gap: 16px;
+  grid-row-gap: 29px;
+  grid-template-columns: repeat(12, 1fr); }
