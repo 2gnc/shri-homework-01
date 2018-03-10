@@ -1,5 +1,8 @@
 .card
-  //display: grid
+  display: grid
+  grid-template-columns: repeat( 12, 1fr )
+  //grid-template-rows: repeat( 3, 1fr )
+
   &_m
     grid-column: span 12
     @media ( min-width: 576px )
@@ -14,6 +17,8 @@
       grid-column: span 4
   &_l
     grid-column: span 12
+    grid-column-gap: 16px
+    grid-template-rows: auto auto 1rem
     @media ( min-width: 1600px )
       grid-column: span 6
   &__link
@@ -53,6 +58,10 @@
     @media ( min-width: 1920px )
       font-size: 20px
   &__controls
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    align-items: center
     &_dots
       width: 14px
       height: 4px
@@ -63,3 +72,44 @@
       height: 16px
       cursor: pointer
       background-image: url("img/Heart.png")
+
+.card_m .card__link
+  grid-column: span 12
+
+.card_m .card__pic
+  grid-column: span 12
+
+.card_m .card__desc
+  grid-column: span 11
+
+.card_m .card__controls
+  grid-column: span 1
+
+.card_l .card__pic
+  grid-column: span 8
+  grid-row: span 3
+
+.card_l .card__link
+  grid-column: span 4
+
+.card_l .card__desc
+  grid-column: span 4
+
+.card_l .card__controls
+  grid-column: span 4
+  flex-direction: row
+  justify-content: space-between
+
+.card_s .card__link
+  grid-column: span 12
+
+.card_s .card__pic
+  grid-column: span 12
+
+.card_s .card__desc
+  grid-column: span 12
+
+.card_s .card__controls
+  grid-column: span 12
+  flex-direction: row
+  justify-content: space-between
