@@ -50,6 +50,9 @@
     .card_l {
       grid-column: span 6; } }
 
+.card__link {
+  text-decoration: none; }
+
 .card__header {
   font-family: "YS Text";
   font-weight: 700;
@@ -98,13 +101,13 @@
     .card__desc {
       font-size: 20px; } }
 
-.card__controls {
+.card__controls_dots {
   width: 14px;
   height: 4px;
   cursor: pointer;
   background-image: url("img/Actions.png"); }
 
-.card__like {
+.card__controls_likes {
   width: 17px;
   height: 16px;
   cursor: pointer;

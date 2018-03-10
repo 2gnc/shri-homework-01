@@ -16,6 +16,8 @@
     grid-column: span 12
     @media ( min-width: 1600px )
       grid-column: span 6
+  &__link
+    text-decoration: none
   &__header
     font-family: "YS Text"
     font-weight: 700
@@ -51,12 +53,13 @@
     @media ( min-width: 1920px )
       font-size: 20px
   &__controls
-    width: 14px
-    height: 4px
-    cursor: pointer
-    background-image: url("img/Actions.png")
-  &__like
-    width: 17px
-    height: 16px
-    cursor: pointer
-    background-image: url("img/Heart.png")
+    &_dots
+      width: 14px
+      height: 4px
+      cursor: pointer
+      background-image: url("img/Actions.png")
+    &_likes
+      width: 17px
+      height: 16px
+      cursor: pointer
+      background-image: url("img/Heart.png")
