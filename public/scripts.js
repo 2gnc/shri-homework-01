@@ -11,13 +11,23 @@
 			
 			const picNum = data[i].image ? parseInt(data[i].image.match(/\d+/)) : null;
 			const textColor = data[i].titleColor;
+			const desc = data[i].description? data[i].description.replace(/\r|\n/g, ' ') : null ;
+			
+			function cutter( text ) {
+				while ( text.length > 250 ) {
+					text = text.substr( 0, 246 ) + ' ...';
+				}
+				return text;
+			}
+			
+			const descToDisplay = desc ? cutter( desc ) : null;
 			
 			if ( data[i].size === 'l' ) {
 				typeL.content.querySelector( 'img' ).src = data[i].image;
 				typeL.content.querySelector( 'img' ).srcset = `img/${picNum}.png 1x, img/${picNum}@2x.png 2x, img/${picNum}@3x.png 3x`;
 				typeL.content.querySelector( 'img' ).alt = data[i].title;
 				typeL.content.querySelector( 'h2' ).innerText = data[i].title;
-				typeL.content.querySelector( 'p' ).innerText = data[i].description;
+				typeL.content.querySelector( 'p' ).innerText = descToDisplay;
 				typeL.content.querySelector( 'a' ).style = `color: ${textColor}`;
 				root.appendChild(typeL.content.cloneNode(true));
 			} else if ( data[i].size === 'm' ) {
@@ -25,12 +35,12 @@
 				typeM.content.querySelector( 'img' ).srcset = `img/${picNum}.png 1x, img/${picNum}@2x.png 2x, img/${picNum}@3x.png 3x`;
 				typeM.content.querySelector( 'img' ).alt = data[i].title;
 				typeM.content.querySelector( 'h2' ).innerText = data[i].title;
-				typeM.content.querySelector( 'p' ).innerText = data[i].description;
+				typeM.content.querySelector( 'p' ).innerText = descToDisplay;
 				typeM.content.querySelector( 'a' ).style = `color: ${textColor}`;
 				root.appendChild(typeM.content.cloneNode(true));
 			} else if ( data[i].size === 's' && !data[i].image ) {
 				typeS1.content.querySelector( 'h2' ).innerText = data[i].title;
-				typeS1.content.querySelector( 'p' ).innerText = data[i].description;
+				typeS1.content.querySelector( 'p' ).innerText = descToDisplay;
 				typeS1.content.querySelector( 'a' ).style = `color: ${textColor}`;
 				root.appendChild(typeS1.content.cloneNode(true));
 			} else {
