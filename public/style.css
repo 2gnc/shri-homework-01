@@ -24,7 +24,18 @@
     min-height: 21px; }
   .logo__link {
     display: inline-block;
-    margin: 50px 0; }
+    margin: 46px 0; }
+
+.card {
+  display: grid; }
+  .card__controls {
+    width: 14px;
+    height: 4px;
+    background-image: url("img/Actions.png"); }
+  .card__like {
+    width: 17px;
+    height: 16px;
+    background-image: url("img/Heart.png"); }
 
 .main {
   outline: 1px solid lime;
