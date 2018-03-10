@@ -11,15 +11,14 @@
 			
 			const picNum = data[i].image ? parseInt(data[i].image.match(/\d+/)) : null;
 			const textColor = data[i].titleColor;
-			const desc = data[i].description? data[i].description.replace(/\r|\n/g, ' ') : null ;
 			
+			const desc = data[i].description? data[i].description.replace(/\r|\n/g, ' ') : null ;
 			function cutter( text ) {
 				while ( text.length > 250 ) {
 					text = text.substr( 0, 246 ) + ' ...';
 				}
 				return text;
 			}
-			
 			const descToDisplay = desc ? cutter( desc ) : null;
 			
 			if ( data[i].size === 'l' ) {
