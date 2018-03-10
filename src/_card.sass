@@ -1,11 +1,21 @@
 .card
   //display: grid
   &_m
-    grid-column: span 6
+    grid-column: span 12
+    @media ( min-width: 576px )
+      grid-column: span 6
+    @media ( min-width: 1600px )
+      grid-column: span 4
   &_s
-    grid-column: span 4
+    grid-column: span 12
+    @media ( min-width: 576px )
+      grid-column: span 6
+    @media ( min-width: 768px )
+      grid-column: span 4
   &_l
     grid-column: span 12
+    @media ( min-width: 1600px )
+      grid-column: span 6
   &__header
     font-family: "YS Text"
     font-weight: 700
