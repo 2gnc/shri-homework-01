@@ -34,9 +34,6 @@
     @media (min-width: 576px) {
       .card_m {
         grid-column: span 6; } }
-    @media (min-width: 1600px) {
-      .card_m {
-        grid-column: span 4; } }
   .card_s {
     grid-column: span 12; }
     @media (min-width: 576px) {
@@ -111,7 +108,8 @@
     justify-content: space-around;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    align-items: center; }
+    align-items: center;
+    background-repeat: no-repeat; }
     .card__controls_dots {
       width: 14px;
       height: 4px;
@@ -131,19 +129,50 @@
 
 .card_m .card__desc {
   grid-column: span 11; }
+  @media (max-width: 576px) {
+    .card_m .card__desc {
+      grid-column: span 12; } }
 
 .card_m .card__controls {
   grid-column: span 1; }
+  @media (max-width: 576px) {
+    .card_m .card__controls {
+      grid-column: span 12;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between; } }
 
 .card_l .card__pic {
   grid-column: span 8;
   grid-row: span 3; }
+  @media (max-width: 768px) {
+    .card_l .card__pic {
+      grid-column: span 12; } }
+  @media (min-width: 1600px) {
+    .card_l .card__pic {
+      grid-column: span 12; } }
 
 .card_l .card__link {
   grid-column: span 4; }
+  @media (max-width: 768px) {
+    .card_l .card__link {
+      grid-column: span 12; } }
+  @media (min-width: 1600px) {
+    .card_l .card__link {
+      grid-column: span 12; } }
 
 .card_l .card__desc {
   grid-column: span 4; }
+  @media (max-width: 768px) {
+    .card_l .card__desc {
+      grid-column: span 12; } }
+  @media (min-width: 1600px) {
+    .card_l .card__desc {
+      grid-column: span 12; } }
 
 .card_l .card__controls {
   grid-column: span 4;
@@ -172,7 +201,8 @@
   flex-direction: row;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between; }
+  justify-content: space-between;
+  padding-top: 0.5em; }
 
 .main {
   height: 100%;
