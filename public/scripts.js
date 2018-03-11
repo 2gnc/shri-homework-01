@@ -30,7 +30,7 @@
 				typeL.content.querySelector( 'a' ).style = `color: ${textColor}`;
 				root.appendChild(typeL.content.cloneNode(true));
 			} else if ( data[i].size === 'm' ) {
-				typeM.content.querySelector( 'img' ).src = `img/${picNum}@2.png`;
+				typeM.content.querySelector( 'img' ).src = `img/${picNum}@2x.png`;
 				typeM.content.querySelector( 'img' ).srcset = `img/${picNum}.png 1x, img/${picNum}@2x.png 2x, img/${picNum}@3x.png 3x`;
 				typeM.content.querySelector( 'img' ).alt = data[i].title;
 				typeM.content.querySelector( 'h2' ).innerText = data[i].title;
