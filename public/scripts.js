@@ -22,8 +22,8 @@
 			const descToDisplay = desc ? cutter( desc ) : null;
 			
 			if ( data[i].size === 'l' ) {
-				typeL.content.querySelector( 'img' ).src = data[i].image;
-				typeL.content.querySelector( 'img' ).srcset = `img/${picNum}.png 1x, img/${picNum}@2x.png 2x, img/${picNum}@3x.png 3x`;
+				typeL.content.querySelector( 'img' ).src = `img/${picNum}@2x.png`;
+				typeL.content.querySelector( 'img' ).srcset = `img/${picNum}@2x.png 2x, img/${picNum}@3x.png 3x`;
 				typeL.content.querySelector( 'img' ).alt = data[i].title;
 				typeL.content.querySelector( 'h2' ).innerText = data[i].title;
 				typeL.content.querySelector( 'p' ).innerText = descToDisplay;
@@ -43,8 +43,8 @@
 				typeS1.content.querySelector( 'a' ).style = `color: ${textColor}`;
 				root.appendChild(typeS1.content.cloneNode(true));
 			} else {
-				typeS2.content.querySelector( 'img' ).src = data[i].image;
-				typeS2.content.querySelector( 'img' ).srcset = `img/${picNum}.png 1x, img/${picNum}@2x.png 2x, img/${picNum}@3x.png 3x`;
+				typeS2.content.querySelector( 'img' ).src = `img/${picNum}@2x.png`;
+				typeS2.content.querySelector( 'img' ).srcset = `img/${picNum}@2x.png 2x, img/${picNum}@3x.png 3x`;
 				typeS2.content.querySelector( 'img' ).alt = data[i].title;
 				typeS2.content.querySelector( 'h2' ).innerText = data[i].title;
 				typeS2.content.querySelector( 'a' ).style = `color: ${textColor}`;
