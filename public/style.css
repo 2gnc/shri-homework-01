@@ -30,7 +30,8 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr); }
   .card_m {
-    grid-column: span 12; }
+    grid-column: span 12;
+    grid-column-gap: 0.5em; }
     @media (min-width: 576px) {
       .card_m {
         grid-column: span 6; } }
