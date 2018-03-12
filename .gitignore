@@ -1,3 +1,4 @@
 node_modules
 yarn.lock
 _prep
+yarn-error.log
